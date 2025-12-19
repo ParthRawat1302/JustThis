@@ -1,1 +1,186 @@
-hello
+🚀 Full Stack Web Application (Flipr Assignment)
+
+A production-ready full-stack web application built using React + TailwindCSS for the frontend and FastAPI + MongoDB for the backend.
+The application includes a Landing Page and an Admin Panel for managing projects, clients, contact queries, and newsletter subscriptions.
+
+📌 Features
+🌐 Landing Page
+
+Hero Section with Free Consultation form
+
+Our Projects (fetched from backend)
+
+Happy Clients (fetched from backend)
+
+Contact Form (stores submissions in database)
+
+Newsletter Subscription
+
+Responsive & clean UI
+
+🔐 Admin Panel
+
+Add & view Projects
+
+Add & view Clients
+
+View Contact Form submissions
+
+View Newsletter subscribers
+
+🧱 Tech Stack
+Frontend
+
+React (Vite)
+
+TypeScript
+
+TailwindCSS
+
+Axios
+
+React Router DOM
+
+Deployed on Vercel
+
+Backend
+
+Python FastAPI
+
+MongoDB Atlas (Motor – async)
+
+Pydantic
+
+Uvicorn
+
+Cloudinary (image upload & crop)
+
+Deployed on Render
+
+📂 Project Structure
+Backend
+backend/
+├── app/
+│   ├── main.py
+│   ├── config.py
+│   ├── database.py
+│   ├── models/
+│   ├── routes/
+│   └── utils/
+├── requirements.txt
+└── .env (not committed)
+
+Frontend
+frontend/
+├── index.html
+├── postcss.config.ts
+├── tailwind.config.js
+├── src/
+│   ├── api/
+│   ├── components/
+│   ├── pages/
+│   ├── routes/
+│   ├── styles/
+│   ├── App.tsx
+│   └── main.tsx
+└── public/
+
+🔗 Live URLs
+
+Frontend (Vercel):
+https://your-frontend.vercel.app
+
+Backend (Render):
+https://your-backend.onrender.com
+
+⚙️ Environment Variables
+Backend (.env)
+MONGO_URI=mongodb+srv://<username>:<password>@cluster.mongodb.net
+DATABASE_NAME=flipr_db
+CORS_ORIGINS=https://your-frontend.vercel.app
+CLOUDINARY_CLOUD_NAME=xxxx
+CLOUDINARY_API_KEY=xxxx
+CLOUDINARY_API_SECRET=xxxx
+
+Frontend (.env)
+VITE_API_URL=https://your-backend.onrender.com
+
+🔌 API Endpoints
+Projects
+
+GET /projects
+
+POST /projects
+
+Clients
+
+GET /clients
+
+POST /clients
+
+Contact
+
+GET /contact
+
+POST /contact
+
+Newsletter
+
+GET /newsletter
+
+POST /newsletter
+
+🧪 Run Locally
+Backend
+cd backend
+python -m venv venv
+venv\Scripts\activate   # Windows
+pip install -r requirements.txt
+uvicorn app.main:app --reload
+
+Frontend
+cd frontend
+npm install
+npm run dev
+
+🚀 Deployment
+Backend (Render)
+
+Runtime: Python 3
+
+Root Directory: backend
+
+Build Command:
+
+pip install -r requirements.txt
+
+
+Start Command:
+
+python -m uvicorn app.main:app --host 0.0.0.0 --port 10000
+
+Frontend (Vercel)
+
+Framework: Vite
+
+Build Command:
+
+npm run build
+
+
+Output Directory:
+
+dist
+
+🛠 Troubleshooting
+❌ uvicorn: command not found
+
+✔ Ensure uvicorn is present in requirements.txt
+
+❌ CORS Error
+
+✔ Add frontend URL to CORS_ORIGINS in backend env
+
+❌ MongoDB connection failed
+
+✔ Whitelist IP 0.0.0.0/0 in MongoDB Atlas
