@@ -1,0 +1,18 @@
+@reference "tailwindcss";
+
+@tailwind base;
+@tailwind utilities;
+
+.input {
+  @apply w-full p-2 mb-2 text-black;
+}
+.card {
+  @apply p-6 bg-gray-100 rounded shadow text-center font-semibold;
+}
+
+.btn {
+  @apply mt-3 bg-blue-600 text-white px-4 py-2;
+}
+.form-input {
+  @apply w-full p-2 mb-3 rounded text-black;
+}
