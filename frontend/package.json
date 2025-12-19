@@ -33,11 +33,3 @@
     "vite": "^7.2.4"
   }
 }
-
-
-git init
-git add .
-git commit -m "Deploy React frontend"
-git branch -M main
-git remote add origin https://github.com/ParthRawat1302/JustThis.git
-git push -u origin main
